@@ -85,7 +85,7 @@
 const links=[...document.querySelectorAll('#jump a')], secs=links.map(a=>document.querySelector(a.getAttribute('href')));
 const mark=()=>{let cur=0;secs.forEach((s,i)=>{if(s.getBoundingClientRect().top<innerHeight*.4)cur=i});links.forEach((a,i)=>a.classList.toggle('on',i===cur));
   const a=links[cur],j=document.getElementById('jump');if(a.offsetLeft<j.scrollLeft||a.offsetLeft+a.offsetWidth>j.scrollLeft+j.clientWidth)j.scrollTo({left:a.offsetLeft-20})};
-addEventListener('scroll',mark,{passive:true});mark();
+const io=new IntersectionObserver(mark,{rootMargin:'0px 0px -60% 0px'});secs.forEach(x=>io.observe(x));mark();
 </script>
 </body>
 </html>

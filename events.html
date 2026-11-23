@@ -121,8 +121,8 @@ else ScrollTrigger.create({trigger:'.stops',start:'top 60%',end:'bottom 70%',scr
   const p=s.progress, pt=route.getPointAtLength(L*p);
   route.style.strokeDashoffset=L*(1-p); dot.setAttribute('cx',pt.x); dot.setAttribute('cy',pt.y);
 }});
-const light=()=>{const mid=innerHeight*.5;let best=stops[0],bd=1e9;stops.forEach(el=>{const r=el.getBoundingClientRect(),d=Math.abs((r.top+r.bottom)/2-mid);if(d<bd){bd=d;best=el}});stops.forEach(el=>el.classList.toggle('on',el===best))};
-addEventListener('scroll',light,{passive:true});light();
+const light=es=>es.forEach(e=>{if(e.isIntersecting)stops.forEach(el=>el.classList.toggle('on',el===e.target))});
+const io=new IntersectionObserver(light,{rootMargin:'-50% 0px -50% 0px'});stops.forEach(x=>io.observe(x));
 
 const $=id=>document.getElementById(id), peso=n=>'₱'+Math.round(n).toLocaleString('en-US');
 function calc(){

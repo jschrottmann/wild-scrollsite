@@ -60,3 +60,8 @@ a{color:inherit}
   .find{grid-template-columns:1fr}
   .dock span{display:none}.dock .btn{flex:1;text-align:center}
 }
+
+/* taste pass 2026-11-23: press feedback and reduced motion */
+.btn{transition:transform .15s cubic-bezier(.16,1,.3,1),filter .15s}.btn:hover{filter:brightness(1.08)}.btn:active{transform:translateY(1px) scale(.98)}
+.btn:focus-visible,.nav a:focus-visible{outline:2px solid var(--a);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
