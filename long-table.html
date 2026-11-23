@@ -5,7 +5,10 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>The long table · Wild Siargao</title>
 <meta name="description" content="The long table at Wild comes out three times a week. Seats go by drop. Join Wild Access on WhatsApp for the dates.">
+<meta name="theme-color" content="#0D0907">
+<link rel="icon" href="img/wild-skull-cream.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="site.css">
 <style>
@@ -24,7 +27,7 @@
 .card .tag{position:absolute;top:14px;left:14px;z-index:1;background:var(--a);color:var(--coal);font:600 12px/1 Inter;letter-spacing:.14em;text-transform:uppercase;padding:9px 12px}
 .end{flex:none;width:min(46vw,600px);position:relative}
 .end h2{font-size:clamp(46px,6vw,100px)}
-.seats{position:absolute;left:var(--pad);right:var(--pad);bottom:34px;display:flex;align-items:center;gap:18px}
+.seats{position:absolute;left:var(--pad);right:var(--pad);bottom:110px;display:flex;align-items:center;gap:18px}
 .seats ol{display:flex;gap:7px;list-style:none;padding:0;flex:1}
 .seats li{flex:1;height:8px;background:rgba(244,235,221,.2)}
 .seats li.on{background:var(--a)}
@@ -41,7 +44,9 @@
 </style>
 </head>
 <body data-room="table">
+<a class="skip" href="#main">Skip to content</a>
 <nav class="nav" aria-label="Main"><a class="home" href="index.html" aria-label="Wild, home"><img src="img/wild-skull-cream.png" alt=""></a><span class="links"><a href="index.html">Wild</a><a href="menu.html">Menu</a><a href="long-table.html" aria-current="page">The long table</a><a href="events.html">Events</a><a href="visit.html">Find us</a></span><a class="act" href="#join">Get the dates</a></nav>
+<main id="main">
 
 <header class="hero" style="--img:url(img/longtable.jpg)">
   <h1 class="d">This table only comes out <em>three times</em> a week.</h1>
@@ -54,10 +59,10 @@
   <div class="track" id="track">
     <div class="plank"></div>
     <div class="intro"><div class="cap">The lot runs on a weekly rhythm</div><h2 class="d">Four reasons to pull up a chair.</h2></div>
-    <article class="card"><span class="tag">One night a week</span><figure><img src="img/kamayan.jpg" alt="Kamayan spread on banana leaves"></figure><h3 class="d">Kamayan</h3><p>Hands only. Banana leaves down the table.</p></article>
-    <article class="card"><span class="tag">₱2,400 a seat</span><figure><img src="img/council.jpg" alt="Guests sharing plates down one table"></figure><h3 class="d">The Council of Strangers</h3><p>One night a week, with the Guild. Six to fourteen seats.</p></article>
-    <article class="card"><span class="tag">June to August</span><figure><img src="img/music.jpg" alt="A set on the nipa stage"></figure><h3 class="d">The nipa stage</h3><p>Under palm thatch. A talk, a set, an open studio.</p></article>
-    <article class="card"><span class="tag">Three nights a week</span><figure><img src="img/tasting.jpg" alt="Plates down the long table"></figure><h3 class="d">The long table</h3><p>Five-course progressive Filipino, plated or shared down the table.</p></article>
+    <article class="card"><span class="tag">One night a week</span><figure><img src="img/kamayan.jpg" width="1333" height="2000" alt="Kamayan spread on banana leaves"></figure><h3 class="d">Kamayan</h3><p>Hands only. Banana leaves down the table.</p></article>
+    <article class="card"><span class="tag">₱2,400 a seat</span><figure><img src="img/council.jpg" width="1333" height="2000" alt="Guests sharing plates down one table"></figure><h3 class="d">The Council of Strangers</h3><p>One night a week, with the Guild. Six to fourteen seats.</p></article>
+    <article class="card"><span class="tag">June to August</span><figure><img src="img/music.jpg" width="1289" height="1600" alt="A set on the nipa stage"></figure><h3 class="d">The nipa stage</h3><p>Under palm thatch. A talk, a set, an open studio.</p></article>
+    <article class="card"><span class="tag">Three nights a week</span><figure><img src="img/tasting.jpg" width="2000" height="1333" alt="Plates down the long table"></figure><h3 class="d">The long table</h3><p>Five-course progressive Filipino, plated or shared down the table.</p></article>
     <div class="end"><h2 class="d">When it says six left, <em>it means six.</em></h2></div>
   </div>
   <div class="seats"><ol id="seats" aria-hidden="true"></ol><span id="left">14 seats open</span></div>
@@ -74,9 +79,11 @@
   <div class="b" role="img" aria-label="The long table set for service"></div>
 </section>
 
+</main>
+
 <footer class="foot"><span>Wild · Part of Bespoke Properties Siargao</span><span>The Rōnin and Wild · <a href="https://www.roninandwild.com/">www.roninandwild.com</a></span></footer>
 
-<div class="dock"><span><b>Long table</b> · three nights a week · seats by drop</span><a class="btn" href="https://wa.me/639859694147?text=Hi%20Wild%2C%20add%20me%20to%20Wild%20Access%20please.">Join Wild Access</a></div>
+<aside class="dock" aria-label="Join Wild Access"><span><b>Long table</b> · three nights a week · seats by drop</span><a class="btn" href="https://wa.me/639859694147?text=Hi%20Wild%2C%20add%20me%20to%20Wild%20Access%20please.">Join Wild Access</a></aside>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>

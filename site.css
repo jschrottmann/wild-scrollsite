@@ -4,7 +4,7 @@
 body[data-room="table"]{--a:#D8F25C}
 body[data-room="events"]{--a:#EBCB93}
 *{box-sizing:border-box;margin:0}
-html{background:var(--coal)}
+html{background:var(--coal);scroll-padding-top:calc(var(--navh) + 16px);scroll-padding-bottom:92px}
 body{font:400 17px/1.55 Inter,system-ui,sans-serif;color:var(--rice);background:var(--coal);padding-bottom:76px;overflow-x:hidden}
 a{color:inherit}
 :focus-visible{outline:2px solid var(--a);outline-offset:3px}
@@ -28,7 +28,7 @@ a{color:inherit}
 
 .hero{min-height:100svh;display:grid;align-content:end;padding:120px var(--pad) clamp(96px,14vh,150px);position:relative;isolation:isolate}
 .hero::before{content:"";position:absolute;inset:0;z-index:-2;background:var(--img,none) center/cover}
-.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(13,9,7,.6) 0%,rgba(13,9,7,.2) 35%,rgba(13,9,7,.96) 100%)}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(13,9,7,.6) 0%,rgba(13,9,7,.78) 30%,rgba(13,9,7,.96) 100%)}
 .hero h1{font-size:clamp(56px,10.4vw,172px);max-width:15ch}
 .hero h1:not(:first-child){margin-top:18px}
 .hero .lede{margin-top:26px}
@@ -65,3 +65,14 @@ a{color:inherit}
 .btn{transition:transform .15s cubic-bezier(.16,1,.3,1),filter .15s}.btn:hover{filter:brightness(1.08)}.btn:active{transform:translateY(1px) scale(.98)}
 .btn:focus-visible,.nav a:focus-visible{outline:2px solid var(--a);outline-offset:3px}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+
+/* audit 2026-11-24: WCAG 2.2 AA fixes from the Accessibility Auditor pass */
+.d{text-wrap:balance}
+.hero .cap{color:var(--rice)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.skip{position:absolute;left:12px;top:-80px;z-index:60;background:var(--a);color:var(--coal);padding:14px 18px;font:600 13px/1 Inter;letter-spacing:.12em;text-transform:uppercase;text-decoration:none}
+.skip:focus{top:12px}
+@media(max-width:760px){.nav .links a:focus-visible{outline-offset:-2px}}
+@media(max-width:360px){:root{--navh:133px}.nav .links{flex-wrap:wrap;overflow:visible;justify-content:flex-start;gap:0 14px}}
+@media(max-height:480px){.nav,.dock{position:static}body{padding-bottom:0}html{scroll-padding:0}}
+.foot a,.find dd a{display:inline-block;padding:12px 0;margin:-12px 0}
