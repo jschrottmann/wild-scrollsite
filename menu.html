@@ -17,6 +17,7 @@ html{scroll-padding-top:calc(var(--navh) + 72px)}
 .jump{position:sticky;top:var(--navh);z-index:30;display:flex;gap:6px;overflow-x:auto;padding:10px var(--pad);background:rgba(13,9,7,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);scrollbar-width:none}
 .jump a{flex:none;font:600 12px/1 Inter;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--smoke);padding:11px 14px;box-shadow:inset 0 0 0 1px var(--line)}
 .jump a.on{background:var(--a);color:var(--coal);box-shadow:none}
+.jump a{transition:color .15s,box-shadow .15s}@media (hover:hover){.jump a:not(.on):hover{color:var(--rice);box-shadow:inset 0 0 0 1px var(--a)}}
 .sec{padding:clamp(48px,7vw,96px) var(--pad);border-bottom:1px solid var(--line);display:grid;grid-template-columns:minmax(220px,.8fr) 1.6fr;gap:clamp(20px,5vw,80px);scroll-margin-top:calc(var(--navh) + 56px)}
 .sec header{align-self:start;position:sticky;top:calc(var(--navh) + 72px)}
 .sec h2{font-size:clamp(44px,5.6vw,92px)}
