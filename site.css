@@ -1,0 +1,62 @@
+/* Wild scroll site: shared look "One site, three rooms" (approved 2026-11-23).
+   Same ground, type, nav, buttons and action bar on every page. Each page sets one accent with body[data-room]. */
+:root{color-scheme:dark;--navh:75px;--coal:#0D0907;--char:#1B120D;--rice:#F4EBDD;--soft:#DCCFBF;--smoke:#A89A8D;--line:rgba(244,235,221,.16);--a:#FF5A1F;--pad:clamp(18px,4vw,48px)}
+body[data-room="table"]{--a:#D8F25C}
+body[data-room="events"]{--a:#EBCB93}
+*{box-sizing:border-box;margin:0}
+html{background:var(--coal)}
+body{font:400 17px/1.55 Inter,system-ui,sans-serif;color:var(--rice);background:var(--coal);padding-bottom:76px;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--a);outline-offset:3px}
+.d{font-family:Anton,Impact,sans-serif;font-weight:400;text-transform:uppercase;line-height:.9;letter-spacing:.005em}
+.d em{font-style:normal;color:var(--a)}
+.cap{font:600 12px/1.3 Inter;letter-spacing:.18em;text-transform:uppercase;color:var(--a)}
+.lede{color:var(--soft);max-width:46ch}
+
+.nav{position:fixed;inset:0 0 auto 0;z-index:40;display:flex;align-items:center;gap:clamp(14px,2.4vw,30px);padding:14px var(--pad);background:rgba(13,9,7,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);font:600 12px/1 Inter;letter-spacing:.15em;text-transform:uppercase}
+.nav img{height:30px;display:block}
+.nav .links{display:flex;align-items:center;gap:clamp(14px,2.4vw,30px)}
+.nav a{text-decoration:none;color:var(--smoke);padding:8px 0}
+.nav a:hover,.nav a[aria-current]{color:var(--rice)}
+.nav a[aria-current]{box-shadow:0 2px 0 var(--a)}
+.nav .act{margin-left:auto;background:var(--a);color:var(--coal);padding:13px 16px}
+.nav .act:hover{color:var(--coal)}
+
+.btn{display:inline-block;background:var(--a);color:var(--coal);font:600 13px/1 Inter;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;padding:19px 26px;border:0;cursor:pointer}
+.btn.o{background:none;color:var(--rice);box-shadow:inset 0 0 0 1px rgba(244,235,221,.5)}
+.row{display:flex;flex-wrap:wrap;gap:10px}
+
+.hero{min-height:100svh;display:grid;align-content:end;padding:120px var(--pad) clamp(96px,14vh,150px);position:relative;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;z-index:-2;background:var(--img,none) center/cover}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(13,9,7,.6) 0%,rgba(13,9,7,.2) 35%,rgba(13,9,7,.96) 100%)}
+.hero h1{font-size:clamp(56px,10.4vw,172px);max-width:15ch}
+.hero h1:not(:first-child){margin-top:18px}
+.hero .lede{margin-top:26px}
+
+.band{padding:clamp(60px,9vw,130px) var(--pad);border-top:1px solid var(--line)}
+.band h2{font-size:clamp(46px,7.4vw,124px);max-width:14ch}
+.band h2+.lede{margin-top:20px}
+
+.find{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,80px);align-items:end}
+.find dl{display:grid;gap:18px}
+.find dt{font:600 12px/1.3 Inter;letter-spacing:.18em;text-transform:uppercase;color:var(--smoke)}
+.find dd{margin:4px 0 0;font-size:19px}
+
+.dock{position:fixed;inset:auto 0 0 0;z-index:40;display:flex;align-items:center;justify-content:space-between;gap:16px;background:rgba(13,9,7,.94);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:12px var(--pad)}
+.dock span{font-size:14px;color:var(--smoke)}
+.dock b{color:var(--rice);font-weight:600}
+.dock .btn{padding:16px 22px}
+.dock{padding-bottom:calc(12px + env(safe-area-inset-bottom,0px))}
+.nav{padding-top:calc(14px + env(safe-area-inset-top,0px))}
+
+.foot{padding:34px var(--pad) 40px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:space-between;color:var(--smoke);font-size:14px}
+.foot a{color:var(--rice)}
+
+@media(max-width:760px){
+  :root{--navh:104px}
+  .nav{flex-wrap:wrap;row-gap:6px;padding-bottom:8px}
+  .nav .links{order:3;flex-basis:100%;gap:12px;justify-content:space-between;letter-spacing:.05em;overflow-x:auto;scrollbar-width:none;white-space:nowrap}
+  .nav .links a{padding:8px 0 9px}
+  .find{grid-template-columns:1fr}
+  .dock span{display:none}.dock .btn{flex:1;text-align:center}
+}

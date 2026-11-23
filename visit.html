@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head><meta name="robots" content="noindex">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Find us · Wild Siargao</title>
+<meta name="description" content="Wild Siargao: Tourism Road, Catangnan, General Luna. Open daily, 12 noon to 11 PM. Reserve on WhatsApp or call 0985 969 4147.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+<style>
+.hero{min-height:78svh}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
+.grid>div{padding:clamp(34px,5vw,70px) var(--pad);border-left:1px solid var(--line);display:flex;flex-direction:column;gap:14px}
+.grid>div:first-child{border-left:0}
+.grid h2{font-size:clamp(34px,3.8vw,60px)}
+.grid p{color:var(--soft);max-width:34ch}
+.grid .row{margin-top:auto;padding-top:14px}
+.next{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line);min-height:70svh}
+.next .t{padding:clamp(48px,8vw,120px) var(--pad);display:grid;align-content:center;gap:20px}
+.next h2{font-size:clamp(46px,6.4vw,108px)}
+.next .p{background:url(img/exterior.jpg) center/cover;min-height:44svh}
+@media(max-width:860px){.grid,.next{grid-template-columns:1fr}.grid>div{border-left:0;border-top:1px solid var(--line)}.grid>div:first-child{border-top:0}}
+</style>
+</head>
+<body data-room="home">
+<nav class="nav" aria-label="Main"><a class="home" href="index.html" aria-label="Wild, home"><img src="img/wild-skull-cream.png" alt=""></a><span class="links"><a href="index.html">Wild</a><a href="menu.html">Menu</a><a href="long-table.html">The long table</a><a href="events.html">Events</a><a href="visit.html" aria-current="page">Find us</a></span><a class="act" href="https://wa.me/message/P7EJUXLZY3U3N1">Reserve</a></nav>
+
+<header class="hero" style="--img:url(img/exterior.jpg)">
+  <h1 class="d">The Rōnin and Wild, <em>one gate.</em></h1>
+  <p class="lede">Tourism Road, Catangnan, General Luna, Siargao, Surigao del Norte.</p>
+</header>
+
+<section class="grid" aria-label="Details">
+  <div><h2 class="d">Where</h2><p>Tourism Road, Catangnan. General Luna, Siargao. Surigao del Norte.</p><div class="row"><a class="btn o" href="https://maps.google.com/?q=Wild+Siargao+Restaurant+General+Luna">Route</a></div></div>
+  <div><h2 class="d">When</h2><p>Open daily, 12 noon to 11 PM. Wild Mornings Friday and Saturday from 7 AM.</p><div class="row"><a class="btn o" href="menu.html">See the menu</a></div></div>
+  <div><h2 class="d">Book</h2><p>Reserve on WhatsApp or call 0985 969 4147. A real person answers.</p><div class="row"><a class="btn" href="https://wa.me/message/P7EJUXLZY3U3N1">Reserve</a><a class="btn o" href="tel:+639859694147">Call</a></div></div>
+</section>
+
+<section class="next">
+  <div class="t"><div class="cap">Sleep next door</div><h2 class="d">Eighteen rooms on the same lot.</h2><p class="lede">Wild shares its lot with The Rōnin: eighteen rooms, two plans, from ₱3,000 a night, breakfast here if you want it.</p><div class="row"><a class="btn o" href="https://www.roninandwild.com/">Rooms and rates</a></div></div>
+  <div class="p" role="img" aria-label="Wild from Tourism Road"></div>
+</section>
+
+<footer class="foot"><span>Wild · Part of Bespoke Properties Siargao</span><span>The Rōnin and Wild · <a href="https://www.roninandwild.com/">www.roninandwild.com</a></span></footer>
+
+<div class="dock"><span><b>Open today</b> · 12 noon to 11 PM · Tourism Road, Catangnan</span><a class="btn" href="https://wa.me/message/P7EJUXLZY3U3N1">Reserve a table</a></div>
+</body>
+</html>

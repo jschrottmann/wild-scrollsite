@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head><meta name="robots" content="noindex">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Events, banquets and catering · Wild Siargao</title>
+<meta name="description" content="Weddings, crew dinners and catering at Wild, General Luna. Four formats from ₱1,250 a head. Plan it by message.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+<style>
+.hero{min-height:0;padding-top:150px;padding-bottom:clamp(110px,16vh,160px)}
+.hero h1{font-size:clamp(50px,8vw,132px);max-width:19ch}
+.facts{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:clamp(22px,5vw,70px);margin-top:34px}
+.facts dt{font:600 12px/1.3 Inter;letter-spacing:.18em;text-transform:uppercase;color:var(--smoke)}
+.facts dd{margin:6px 0 0;font:400 clamp(30px,3.6vw,52px)/1 Anton}
+.walk{display:grid;grid-template-columns:minmax(240px,.7fr) 1.3fr;gap:clamp(20px,5vw,80px);padding:0 var(--pad);border-top:1px solid var(--line)}
+.map{position:sticky;top:var(--navh);height:calc(100svh - var(--navh) - 76px);padding:22px 0;display:flex;flex-direction:column}
+.map svg{flex:1;min-height:0;width:100%}
+.map .k{display:flex;justify-content:space-between;gap:12px;font:500 12px/1.3 Inter;letter-spacing:.08em;text-transform:uppercase;color:var(--smoke)}
+.stops{padding:16svh 0 26svh}
+.stop{min-height:74svh;display:grid;align-content:center}
+.stop .cap{color:var(--smoke);transition:color .3s}
+.stop.on .cap{color:var(--a)}
+.stop h2{font-size:clamp(42px,5.6vw,92px);margin:12px 0 16px;transition:color .3s}
+.stop.on h2{color:var(--a)}
+.stop figure{margin-top:22px;height:30svh;max-width:560px;overflow:hidden;opacity:.55;transition:opacity .4s}
+.stop.on figure{opacity:1}
+.stop img{width:100%;height:100%;object-fit:cover}
+.formats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);margin:44px 0;border:1px solid var(--line)}
+.formats label{background:var(--coal);padding:24px 20px 26px;cursor:pointer;display:block;position:relative}
+.formats input{position:absolute;opacity:0}
+.formats label:has(input:checked){background:var(--a);color:var(--coal)}
+.formats label:has(input:focus-visible){outline:2px solid var(--rice);outline-offset:-4px}
+.formats h3{font:400 38px/1 Anton;text-transform:uppercase;margin:0 0 8px}
+.formats b{display:block;font:600 17px/1 Inter;margin:14px 0 10px}
+.formats small{font-size:14px;line-height:1.45;display:block}
+.build{display:grid;grid-template-columns:repeat(3,1fr) 1.3fr;gap:18px;align-items:end}
+.build label{display:grid;gap:8px}
+.build label span,.sum span{font:600 12px/1.3 Inter;letter-spacing:.18em;text-transform:uppercase;color:var(--smoke)}
+.build input,.build select{font:400 17px Inter;padding:15px 14px;background:transparent;color:var(--rice);border:1px solid rgba(244,235,221,.4);border-radius:0;width:100%;color-scheme:dark}
+.sum{border:1px solid rgba(244,235,221,.4);padding:14px 16px}
+.sum b{display:block;font:400 42px/1 Anton;margin-top:8px;color:var(--a)}
+.err{color:var(--a);min-height:1.6em;margin:14px 0 10px;font-size:15px}
+.fine{margin-top:18px;color:var(--smoke);font-size:14px;max-width:70ch}
+@media(max-width:860px){.facts{grid-template-columns:1fr 1fr}.walk{grid-template-columns:1fr}.map{position:relative;top:0;height:74svh}.stops{padding:0 0 10svh}.stop{min-height:0;padding:34px 0}.formats{grid-template-columns:1fr 1fr}.build{grid-template-columns:1fr 1fr}.sum{grid-column:1/-1}}
+</style>
+</head>
+<body data-room="events">
+<nav class="nav" aria-label="Main"><a class="home" href="index.html" aria-label="Wild, home"><img src="img/wild-skull-cream.png" alt=""></a><span class="links"><a href="index.html">Wild</a><a href="menu.html">Menu</a><a href="long-table.html">The long table</a><a href="events.html" aria-current="page">Events</a><a href="visit.html">Find us</a></span><a class="act" href="#plan">Plan an event</a></nav>
+
+<header class="hero" style="--img:url(img/banquet.jpg)">
+  <h1 class="d">One gate. One kitchen. <em>A hundred and forty seats.</em></h1>
+  <p class="lede">Weddings, crew dinners, the island's festivals. Four formats, one kitchen. Deposits by transfer, no card on file needed.</p>
+  <dl class="facts"><div><dt>Google</dt><dd>4.8 / 1,386</dd></div><div><dt>Formats</dt><dd>4</dd></div><div><dt>From</dt><dd>₱1,250 a head</dd></div></dl>
+</header>
+
+<section class="walk" id="walk" aria-label="Walk the lot">
+  <aside class="map">
+    <div class="k"><span>The lot · 3,645 sqm</span><span>Schematic. Back of the lot shortened</span></div>
+    <svg viewBox="6 10 290 600" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Schematic of the lot from Tourism Road to the back">
+      <rect x="60" y="18" width="180" height="26" fill="#EBCB93"/><text x="150" y="36" text-anchor="middle" fill="#0D0907" font-family="Inter" font-weight="600" font-size="11" letter-spacing="2">TOURISM ROAD</text>
+      <path d="M92 50 L208 50 L200 592 L100 592 Z" fill="#1B120D" stroke="#F4EBDD" stroke-width="1.5"/>
+      <g fill="none" stroke="#F4EBDD" stroke-width="1.2" opacity=".75">
+        <rect x="100" y="70" width="34" height="46"/><rect x="104" y="140" width="92" height="104"/>
+        <rect x="150" y="268" width="44" height="88"/><rect x="150" y="366" width="44" height="88"/>
+        <path d="M104 500 H196 M104 500 V584 M196 500 V584" stroke-dasharray="4 5"/>
+      </g>
+      <g font-family="Inter" font-size="12" fill="#A89A8D">
+        <text x="214" y="64">0 m · gate</text><text x="214" y="144">19.4 m</text><text x="214" y="592">172.9 m</text>
+        <text x="14" y="92">Workshop</text><text x="14" y="106">café</text><text x="14" y="188">Wild</text><text x="14" y="202">hall</text>
+        <text x="14" y="310">The Rōnin</text><text x="14" y="324">18 rooms</text><text x="14" y="532">Farm and</text><text x="14" y="546">compost</text><text x="14" y="560">(planned)</text>
+      </g>
+      <path id="route" d="M168 50 C168 80 150 96 150 128 L150 150 C150 182 126 190 126 214 C126 250 142 262 142 300 L142 430 C142 470 150 480 150 520" fill="none" stroke="#EBCB93" stroke-width="3" stroke-linecap="round"/>
+      <circle id="dot" r="8" fill="#EBCB93" stroke="#0D0907" stroke-width="3" cx="168" cy="50"/>
+    </svg>
+  </aside>
+  <div class="stops">
+    <article class="stop on"><div class="cap">0 m</div><h2 class="d">The gate on Tourism Road.</h2><p class="lede">The Rōnin and Wild, one gate. Tourism Road, Catangnan, General Luna.</p><figure><img src="img/exterior.jpg" alt="The hall at Wild, lit for service"></figure></article>
+    <article class="stop"><div class="cap">19.4 m in</div><h2 class="d">The hall, under the nipa roof.</h2><p class="lede">One kitchen, a hundred and forty seats. Family style, live fire, plated or shared.</p><figure><img src="img/banquet.jpg" alt="A banquet set in the hall"></figure></article>
+    <article class="stop"><div class="cap">In the hall</div><h2 class="d">The long table.</h2><p class="lede">Five-course progressive Filipino, plated or shared down one table.</p><figure><img src="img/longtable.jpg" alt="The long table"></figure></article>
+    <article class="stop"><div class="cap">Next door</div><h2 class="d">Sleep your guests on the lot.</h2><p class="lede">Wild shares its lot with The Rōnin: eighteen rooms, two plans, from ₱3,000 a night, breakfast here if you want it.</p></article>
+    <article class="stop"><div class="cap">Beyond the lot</div><h2 class="d">Or we come to you.</h2><p class="lede">The same kitchen loads out to beaches, villas and boats across the island. Kalan and Dapog travel best; the Wild Table travels with notice.</p><figure><img src="img/catering.jpg" alt="Catering on the island"></figure></article>
+  </div>
+</section>
+
+<section class="band" id="plan">
+  <div class="cap">Plan it by message</div>
+  <h2 class="d" style="margin-top:16px">Date, head count, occasion. <em>An answer the same day.</em></h2>
+  <p class="lede">Pick a format, tell us the numbers, and the message writes itself. We come back with a format, a menu and a deposit note the same day.</p>
+  <div class="formats" id="formats">
+    <label><input type="radio" name="f" value="Kalan" data-p="1250" data-min="100" checked><h3>Kalan</h3><small>Family style · The clay stove</small><b>₱1,250 a head</b><small>Filipino family-style buffet. One hundred guests or more.</small></label>
+    <label><input type="radio" name="f" value="Dapog" data-p="1650"><h3>Dapog</h3><small>Live fire · The open hearth</small><b>₱1,650 a head</b><small>Family style from the roasting area. Whole fish, lechon (whole roast pig), coals.</small></label>
+    <label><input type="radio" name="f" value="Wild Table" data-p="2200"><h3>Wild Table</h3><small>Signature · Five courses</small><b>₱2,200 a head</b><small>Five-course progressive Filipino, plated or shared down the long table.</small></label>
+    <label><input type="radio" name="f" value="Chef's Table" data-p="2850" data-max="40"><h3>Chef's Table</h3><small>Chef-led · Eight courses</small><b>₱2,850 a head</b><small>Eight-course tasting, chef at the table, forty guests at most.</small></label>
+  </div>
+  <div class="build">
+    <label><span>Date</span><input type="date" id="date"></label>
+    <label><span>Guests</span><input type="number" id="pax" min="1" max="140" step="1" value="100" inputmode="numeric"></label>
+    <label><span>Occasion</span><select id="occ"><option>Wedding</option><option>Crew dinner</option><option>Birthday</option><option>Company retreat</option><option>Festival night</option><option>Catering off site</option></select></label>
+    <div class="sum"><span>Per-head rate × guests</span><b id="est">₱125,000</b></div>
+  </div>
+  <div class="err" id="err" role="alert"></div>
+  <a class="btn" id="go" href="#plan">Send this on WhatsApp</a>
+  <p class="fine">The figure is the listed per-head rate times your guests. Wild confirms the final quote, menu and deposit by message.</p>
+</section>
+
+<footer class="foot"><span>Wild · Part of Bespoke Properties Siargao</span><span>The Rōnin and Wild · <a href="https://www.roninandwild.com/">www.roninandwild.com</a></span></footer>
+
+<div class="dock"><span><b>Events</b> · four formats · from ₱1,250 a head</span><a class="btn" href="#plan">Plan an event</a></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+gsap.registerPlugin(ScrollTrigger);
+const route=document.getElementById('route'), dot=document.getElementById('dot'), L=route.getTotalLength(), stops=[...document.querySelectorAll('.stop')];
+const stacked=matchMedia('(max-width: 860px)').matches;
+route.style.strokeDasharray=L; route.style.strokeDashoffset=stacked?0:L;
+if(stacked){const e=route.getPointAtLength(L);dot.setAttribute('cx',e.x);dot.setAttribute('cy',e.y)}
+else ScrollTrigger.create({trigger:'.stops',start:'top 60%',end:'bottom 70%',scrub:.4,onUpdate:s=>{
+  const p=s.progress, pt=route.getPointAtLength(L*p);
+  route.style.strokeDashoffset=L*(1-p); dot.setAttribute('cx',pt.x); dot.setAttribute('cy',pt.y);
+}});
+const light=()=>{const mid=innerHeight*.5;let best=stops[0],bd=1e9;stops.forEach(el=>{const r=el.getBoundingClientRect(),d=Math.abs((r.top+r.bottom)/2-mid);if(d<bd){bd=d;best=el}});stops.forEach(el=>el.classList.toggle('on',el===best))};
+addEventListener('scroll',light,{passive:true});light();
+
+const $=id=>document.getElementById(id), peso=n=>'₱'+Math.round(n).toLocaleString('en-US');
+function calc(){
+  const f=document.querySelector('input[name=f]:checked'), price=+f.dataset.p, min=+f.dataset.min||1, max=+f.dataset.max||140;
+  const pax=Math.round(+$('pax').value); let err='';
+  if(!$('pax').value||!(pax>0)) err='Enter the number of guests.';
+  else if(pax>140) err='The lot seats a hundred and forty. For more, ask about catering off site.';
+  else if(pax<min) err=f.value+' is for one hundred guests or more. Pick another format or raise the count.';
+  else if(pax>max) err=f.value+' seats forty at most. Pick another format or lower the count.';
+  $('err').textContent=err; $('est').textContent=err?'·':peso(price*pax);
+  const d=$('date').value, msg=`Hi Wild, I'd like to plan an event.\nOccasion: ${$('occ').value}\nDate: ${d||'to be confirmed'}\nGuests: ${pax||'?'}\nFormat: ${f.value} (₱${price.toLocaleString('en-US')} a head)`;
+  $('go').href=err?'#plan':'https://wa.me/639859694147?text='+encodeURIComponent(msg);
+  $('go').style.opacity=err?.45:1; return !err;
+}
+document.querySelectorAll('#formats input, #pax, #date, #occ').forEach(el=>el.addEventListener('input',calc));
+$('go').addEventListener('click',e=>{if(!calc())e.preventDefault()});
+$('date').min=new Date().toISOString().slice(0,10); calc();
+</script>
+</body>
+</html>
